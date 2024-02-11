@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Will You Be My Valentine?</h1>
+    </header>
+
+    <main>
+        <p>Kochana Julio</p>
+        <p>W ten wyjątkowy dzień chciałbym zadać ci wyjątkowe pytanie...</p>
+        <p>Will you be my Valentine?</p>
+        <p><button onclick="showResponseForm()">TAK! Marzyłam o tym</button></p>
+        <p><button onclick="showRejectionMessage()">I'm sorry, I can't.</button></p>
+    </main>
+
+    <div id="responseForm" style="display: none;">
+        <p>That's wonderful! Please share your response:</p>
+        <textarea id="responseText" rows="4" cols="50"></textarea>
+        <button onclick="showThankYouMessage()">Submit</button>
+    </div>
+
+    <div id="rejectionMessage" style="display: none;">
+        <p>I understand. If you change your mind, I'll be here.</p>
+    </div>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you for your response!</p>
+    </div>
+
+    <script>
+        function showResponseForm() {
+            document.getElementById('responseForm').style.display = 'block';
+        }
+
+        function showRejectionMessage() {
+            document.getElementById('rejectionMessage').style.display = 'block';
+        }
+
+        function showThankYouMessage() {
+            var response = document.getElementById('responseText').value;
+            document.getElementById('responseForm').style.display = 'none';
+            document.getElementById('rejectionMessage').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+            // You can perform additional actions with the response here
+            console.log('Response:', response);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynka w 2024</title>
+    <style>
+        body {
+		background-color: #d41eb8;
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+		background-image: url('baner.png'); 
+            background-color: pink;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+		background-image: url('rozaa.png'); 
+		color: #1f1616;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+		.heart {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";
+  left: 25px;
+  top: 0;
+  width: 25px;
+  height: 40px;
+  background: red;
+  border-radius: 25px 25px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Właśnie zostałaś moją walentynka</h1>
+    </header>
+
+    <main>
+       <strong><b> <p>Dla ciebie kwiatuszek,</p>
+        <p>sześć małych serduszek,</p>
+        <p>jeszcze cztery robaczki,</p>
+		<p>i trzy słodkie buziaczki.</p>
+        <p><button onclick="showResponseForm()">kocham cie</button></p> </strong></b>
+    </main>
+
+    <div id="responseForm" style="display: none;">
+        <strong><p>Powiedz dlaczego mnie kochasz??????? <3 </p></strong>
+		
+        <textarea id="responseText" rows="4" cols="50"></textarea>
+        <button onclick="showThankYouMessage()">Wyślij</button>
+    </div>
+
+    <div id="rejectionMessage" style="display: none;">
+        <p></p>
+    </div>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Dziękuje za twoją odpowiedź i zostanie moją walentyneczką <button onclick="redirect2()">Zobacz album</button></p></strong></b>
+    </div>
+	
+
+
+    <script>
+        function showResponseForm() {
+            document.getElementById('responseForm').style.display = 'block';
+        }
+
+        function showRejectionMessage() {
+            document.getElementById('rejectionMessage').style.display = 'block';
+        }
+
+        function showThankYouMessage() {
+            var response = document.getElementById('responseText').value;
+            document.getElementById('responseForm').style.display = 'none';
+            document.getElementById('rejectionMessage').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+           document
+            console.log('Response:', response);
+        }
+		function redirect2() {
+            window.location.href = 'album.html';
+        }
+
+        function showNoOptionMessage() {
+            document.getElementById('noOptionMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

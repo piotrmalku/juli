@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden; /* Zablokowanie przewijania, aby przycisk nie uciekał poza ekran */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        button:hover {
+            transform: translate(
+                calc(100vw - 120px),
+                calc(100vh - 60px)
+            );
+        }
+    </style>
+    <title>Walentynki</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Zapytaj swoją ukochaną</h1>
+        <p>Czy chciałabyś być moją Walentynką?</p>
+        <button id="yesButton">Tak</button>
+        <button id="noButton">Nie</button>
+    </div>
+    <script>
+        // Funkcja, aby przycisk uciekał po najechaniu kursorem
+        function moveButton() {
+            const button = document.getElementById('yesButton');
+            const x = Math.random() * (window.innerWidth - button.clientWidth);
+            const y = Math.random() * (window.innerHeight - button.clientHeight);
+
+            button.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        // Dodanie obsługi zdarzenia dla przycisku
+        document.getElementById('yesButton').addEventListener('mouseenter', moveButton);
+    </script>
+</body>
+</html>

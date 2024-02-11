@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body {
+            background-image: url('sciezka/do/tla/kota.jpg'); /* Dodaj właściwą ścieżkę do obrazu */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="step1">Will You Be My Valentine?</h1>
+    </header>
+
+    <main id="step2" style="display: none;">
+        <p>Dear [Imię Twojej Ukochanej/Ukochanego],</p>
+    </main>
+
+    <main id="step3" style="display: none;">
+        <p>I wanted to take this opportunity on Valentine's Day to ask a special question...</p>
+    </main>
+
+    <main id="step4" style="display: none;">
+        <p>Will you be my Valentine?</p>
+    </main>
+
+    <main id="step5" style="display: none;">
+        <p><button onclick="showResponseForm()">Yes, I'd love to!</button></p>
+    </main>
+
+    <main id="step6" style="display: none;">
+        <p><button onclick="showRejectionMessage()">I'm sorry, I can't.</button></p>
+    </main>
+
+    <div id="responseForm" style="display: none;">
+        <p id="step7">That's wonderful! Please share your response:</p>
+        <textarea id="responseText" rows="4" cols="50"></textarea>
+        <button onclick="showThankYouMessage()">Submit</button>
+    </div>
+
+    <div id="rejectionMessage" style="display: none;">
+        <p id="step8">I understand. If you change your mind, I'll be here.</p>
+    </div>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p id="step9">Thank you for your response!</p>
+    </div>
+
+    <script>
+        var steps = 1;
+
+        function nextStep() {
+            document.getElementById('step' + steps).style.display = 'none';
+            steps++;
+            if (steps <= 9) {
+                document.getElementById('step' + steps).style.display = 'block';
+            }
+        }
+
+        function showResponseForm() {
+            nextStep();
+        }
+
+        function showRejectionMessage() {
+            nextStep();
+        }
+
+        function showThankYouMessage() {
+            var response = document.getElementById('responseText').value;
+            nextStep();
+            // You can perform additional actions with the response here
+            console.log('Response:', response);
+        }
+
+        // Display the first step initially
+        document.getElementById('step1').style.display = 'block';
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body {
+            background-color: #ffcccb;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #ff4081;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Valentine's Day Proposal</h1>
+    </header>
+
+    <main>
+        <p>Dear [Imię Twojej Dziewczyny],</p>
+        <p>I have a special question for you...</p>
+        <p>Will you be my Valentine?</p>
+        <p><button onclick="showExcitement()">Yes, I'd love to!</button></p>
+        <p><button onclick="showNoOptionMessage()">No</button></p>
+    </main>
+
+    <div id="excitementMessage" style="display: none;">
+        <p>Hooray! I'm so excited! 😊</p>
+    </div>
+
+    <div id="noOptionMessage" style="display: none;">
+        <p>There's no option other than "Yes" on Valentine's Day! 😄</p>
+    </div>
+
+    <script>
+        function showExcitement() {
+            document.getElementById('excitementMessage').style.display = 'block';
+        }
+
+        function showNoOptionMessage() {
+            document.getElementById('noOptionMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

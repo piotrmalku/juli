@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body {
+            background-color: #ffcccb;
+			background-image: url("hellokicia3.png");
+			background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+			background-image: url("kicia.gif");
+			color: #000000;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            background-image: url("sad.gif");
+			background-color: #fff;
+            padding: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <strong><b><h1>Nie ma takiej opcji żeby powiedzieć nie                   </h1></strong></b>
+    </header>
+
+    <main>
+       <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   <p></p>
+	   
+       
+      
+    </main>
+ <p><button onclick="redirect()">To był żart oczywiście, że sie zgadzam</button></p>
+    <div id="excitementMessage" style="display: none;">
+        <p>H 😊</p>
+        <img src="link/do/obrazka/szczesliwego/kota.jpg" alt="Happy Cat">
+    </div>
+
+    <div id="noOptionMessage" style="display: none;">
+        <p>There's no option other than "Yes" on Valentine's Day! 😄</p>
+    </div>
+
+   <script>
+        function redirect() {
+            window.location.href = '1.html';
+        }
+
+        function showNoOptionMessage() {
+            document.getElementById('noOptionMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
